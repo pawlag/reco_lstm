@@ -8,9 +8,6 @@ Trained on sample from movie lens 25M data https://grouplens.org/datasets/moviel
 
 
 
-## conent:
+## contents:
 - rnn_recommender_lstm_batched.py - model definiton and training loop
 - data_prep.py - movie lens preprocessing (sampling)  
-
-
-
