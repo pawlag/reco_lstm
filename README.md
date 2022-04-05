@@ -1,4 +1,4 @@
-# reco_lstm
+# reco_lstm - recommender model using deep learning LSTM netowork 
 
 Recommender system based on LSTM.\
 Implemented in pytorch.\
