@@ -4,10 +4,13 @@ Recommender system based on LSTM.\
 Implemented in pytorch.\
 Applied layers: embedding, LSTM (stacked), linear\
 Regularization: dropout in LSTM cells \
-Trained on sample from movie lens 25M data https://grouplens.org/datasets/movielens/25m/. The following sampling was applied in order to reduce data size and includ in ratings series only positive ones     
+Trained on 50k (in terms of unique users) data sample from movie lens 25M dataset https://grouplens.org/datasets/movielens/25m/. 
+The following sampling was applied in order to reduce data size: i) only movies with ratings above 3 (positive), ii) only ratings for users having number of positive ratings ranging from 3 to 30   
+
 
 
 
 ## contents:
-- rnn_recommender_lstm_batched.py - model definiton and training loop
+- rnn_recommender_lstm_batched.py - model definiton and training based on batched sequnce data, include packing and unpacking of padded sequance juest before and after LSTM layer
+- rnn_recommender_lstm_unbatched.py - model definiton and training sequance by sequence    
 - data_prep.py - movie lens preprocessing (sampling)  
