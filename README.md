@@ -11,5 +11,6 @@ The following sampling was applied in order to reduce data size: i) only movies 
 
 
 ## contents:
-- rnn_recommender_lstm_batched.py - model definiton and training loop
+- rnn_recommender_lstm_batched.py - model definiton and training based on batched sequnce data, include packing and unpacking of padded sequance juest before and after LSTM layer
+- rnn_recommender_lstm_unbatched.py - model definiton and training sequance by sequence    
 - data_prep.py - movie lens preprocessing (sampling)  
