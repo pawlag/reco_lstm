@@ -5,7 +5,7 @@ Implemented in pytorch.\
 Applied layers: embedding, LSTM (stacked), linear\
 Regularization: dropout in LSTM cells \
 Trained on 50k (in terms of unique users) data sample from movie lens 25M dataset https://grouplens.org/datasets/movielens/25m/. 
-The following sampling was applied in order to reduce data size: i) only movies with ratings above 3 (positive), ii) only ratings for users having number of positive ratings ranging from 3 to 30. Reasonig for such approach is to get balanced sample expressing user actions related to positive decisions.       
+The following sampling was applied in order to reduce data size: i) only movies with ratings above 3 (positive), ii) only ratings for users having number of positive ratings ranging from 3 to 30. Reasoning for such approach is to get balanced sample expressing user actions related to positive decisions.       
 
 
 ## contents:
