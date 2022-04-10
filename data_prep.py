@@ -1,8 +1,11 @@
+from re import S
 from turtle import home
 import pandas as pd
+from sklearn.utils import check_random_state
+from sklearn.model_selection import train_test_split
 
 
-sample_size = 50000
+sample_size = 5000
 min_rating_v = 3
 min_rating_cnt = 5
 max_rating_cnt = 30
@@ -53,6 +56,10 @@ ratings_sample["movies"]=ratings_sample['movieId'].apply(lambda x: '|'.join(map(
 ratings_sample["timestamps"]=ratings_sample['timestamp'].apply(lambda x: '|'.join(map(str,x)))
 ratings_sample.drop(columns=['movieId', 'timestamp'],inplace=True)
 
+# split into train and test
+rs = check_random_state(1977)
+train, test = train_test_split(ratings_sample, test_size = 0.3, random_state=rs)
 
 # write down
-ratings_sample.to_csv('~/data/movielens/ml-25m/ratings_sample.csv', index=False)
+train.to_csv(f'~/data/movielens/ml-25m/train_{sample_size}_{min_rating_v}_{min_rating_cnt}_{max_rating_cnt}.csv', index=False)
+test.to_csv(f'~/data/movielens/ml-25m/test_{sample_size}_{min_rating_v}_{min_rating_cnt}_{max_rating_cnt}.csv', index=False)
